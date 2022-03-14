@@ -1,3 +1,4 @@
+import { RouterEffects } from './../store/router/router.effects';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -46,7 +47,7 @@ registerLocaleData(localeFr, 'fr');
         }
       }
     ),
-    EffectsModule.forRoot(),
+    EffectsModule.forRoot([RouterEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     StoreRouterConnectingModule.forRoot({
       serializer: RouterSerializer

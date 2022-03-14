@@ -1,1 +1,14 @@
-<em>app-component</em>
+<ul>
+    <li><a [routerLink]="['router', ]" [queryParams]="{ plop: 'blop'}">router?plop=blob</a></li>
+    <li><a [routerLink]="['router', 'id']">router/id</a></li>
+    <li><a [routerLink]="['router', 'id']" [queryParams]="{ plop: 'blop', ploup: 'bloup'}">router/id/?plop=blob&ploup=bloup</a></li>
+    <li><a [routerLink]="['test']" >test</a></li>
+</ul>
+
+<h3>Results from .ts router selector : </h3>
+<!-- <ul>
+    <li>url : {{routerState.url | json}}</li>
+    <li>params : {{routerState.params | json}}</li>
+    <li>queryParams : {{routerState.queryParams | json}}</li>
+</ul> -->
+<em>PS: see the console for console.log results from effect (NB: only /router url is matched)</em>
